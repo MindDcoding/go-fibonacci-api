@@ -6,7 +6,7 @@ on:
       - master
 
 env:
-  APP_NAME: go-fibonnaci-api
+  APP_NAME: go-fibonacci-api
   OVERLAY: dev
 
 jobs:
@@ -14,7 +14,7 @@ jobs:
     runs-on: ubuntu-latest
 
     env:
-      IMAGE_NAME: ${{ secrets.DOCKERHUB_USERNAME }}/go-fibonacci-api
+      IMAGE_NAME: ${{ secrets.DOCKER_DEPLOY }}/go-fibonacci-api
 
     outputs:
       SHORT_SHA: ${{ steps.vars.outputs.SHORT_SHA }}
